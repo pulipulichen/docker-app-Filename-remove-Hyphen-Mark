@@ -14,7 +14,7 @@ let main = async function () {
     let dirname = path.dirname(file)
     let filenameNoExt = path.parse(filename).name
     let ext = path.extname(filename)
-    if (filenameNoExt.indexOf('-') === -1) {
+    if (filenameNoExt.lastIndexOf('-') === -1 || filenameNoExt.lastIndexOf('-') < 5) {
       continue
     }
 
