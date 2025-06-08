@@ -3,6 +3,7 @@ services:
   app:
     build: .
     tty: true
+    user: "${UID}:${GID}"
     command: node /app/filename-rm-mark.js "/input/[INPUT]"
     volumes: 
       - ./app:/app/
